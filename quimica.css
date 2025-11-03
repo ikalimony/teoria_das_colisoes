@@ -1,0 +1,180 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #a2d4f4, #fceabb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  .game-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  #track {
+    width: 80%;
+    height: 200px;
+    position: relative;
+    border: 4px solid #34495e;
+    border-radius: 15px;
+    margin-top: 30px;
+    background: repeating-linear-gradient(
+      to right,
+      #bdc3c7 0px,
+      #bdc3c7 50px,
+      #ecf0f1 50px,
+      #ecf0f1 100px
+    );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .molecule {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    transition: left 0.2s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1) translateY(-50%); }
+    50% { transform: scale(1.05) translateY(-50%); }
+    100% { transform: scale(1) translateY(-50%); }
+  }
+  
+  #mol1 {
+    background: radial-gradient(circle at 30% 30%, #4CAF50, #2e7d32);
+    top: 30%;
+  }
+  
+  #mol2 {
+    background: radial-gradient(circle at 30% 30%, #2196F3, #1565c0);
+    top: 70%;
+  }
+  
+  #controls {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #34495e;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    background-color: #aaa;
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #f1c40f;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .question-box {
+    display: none;
+    margin-top: 25px;
+    background-color: #ffffffee;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #2c3e50;
+    width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .turn-info {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .question-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .options button {
+    margin: 8px 0;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .options button:hover {
+    background-color: #1f618d;
+  }
+  
+  /* Barras de velocidade */
+  .speed-container {
+    margin-top: 15px;
+    width: 80%;
+  }
+  
+  .speed-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  }
+  
+  .speed-fill {
+    height: 100%;
+    background: linear-gradient(to right, #00c853, #64dd17);
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+  

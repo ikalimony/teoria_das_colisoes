@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corrida das Moléculas</title>
+  <link rel="stylesheet" href="quimica.css"/>
+</head>
+<body>
+  <h1 class="game-title">Corrida das Moléculas</h1>
+
+  <div id="track" class="track">
+    <div id="mol1" class="molecule">1</div>
+    <div id="mol2" class="molecule">2</div>
+  </div>
+
+  <div id="controls">
+    <button id="startBtn">Iniciar Corrida</button>
+    <button id="resetBtn">Reiniciar</button>
+  </div>
+
+  <div id="message"></div>
+
+  <div class="speed-container">
+    <div>Molécula 1 - Velocidade</div>
+    <div class="speed-bar"><div id="speed1Bar" class="speed-fill"></div></div>
+    <div>Molécula 2 - Velocidade</div>
+    <div class="speed-bar"><div id="speed2Bar" class="speed-fill"></div></div>
+  </div>
+
+  <div id="questionBox" class="question-box">
+    <div id="turnInfo" class="turn-info"></div>
+    <div id="questionText" class="question-text"></div>
+    <div id="options" class="options"></div>
+  </div>
+
+  <script src="quimica.js"></script>
+</body>
+</html>
